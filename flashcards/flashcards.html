@@ -1,0 +1,41 @@
+<head>
+  <title>flashcards</title>
+</head>
+
+<body>
+	<div class="contMain">
+
+		<div class="contMain-head">
+			<h1 class="contMain-title">I &#60;3 Flashing</h1>
+
+			{{> DeckCreationBanner}}
+		</div>
+
+		{{> Decks}}
+	</div>
+</body>
+
+
+<template name="DeckCreationBanner">
+	<div class="contButtons">
+		<div class="column-left">
+			<form action="./DeckCreation">
+				<input type="submit" value="Create New Deck" class="green-sea-flat-button">
+			</form>
+		</div>
+		<div class="column-right">
+			<form action="./Information">
+				<input type="submit" value="Site Information" class="wet-asphalt-flat-button">
+			</form>
+		</div>
+		<div class="column-center">
+			<form action="./StudyDeck">
+				<input type="submit" value="Study Deck" class="peter-river-flat-button">
+			</form>
+		</div>
+	</div>
+</template>
+<template name="Decks">
+	<div class="decks">
+	</div>
+</template>
