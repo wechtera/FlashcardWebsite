@@ -82,6 +82,7 @@
  * ====================*/
 body {
 	background-color: #3b3b3b;
+	height: 100%;
 }
 
 /* 3 Column layout
@@ -100,8 +101,7 @@ body {
 }
 
 .contMain-head {
-	position:fixed;
-	width: inherit 100%;
+	width: 100%;
 	top-margin: 0;
 	background: #87AADF;
 }
@@ -109,49 +109,42 @@ body {
 .contButt {
 
 }
-.contMain-Title{
+.contMain-title{
 	margin-left: 5%;
+	padding-top: 3%;
+	font-size: 36px;
 	
 }
 .contMain {
+	height: 550px;
 	width: 80%;
 	position: top
+	border-radius: 5px;
 	padding-top: 0;
 	border-top: 0;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-top: 2%;
 	background-color: #F1EDCC;
 }
-
-
-/* Big title at the top!!
- * ======================*/
-/*.title-stuff {
-	position: fixed;
-	height: 100px;
-	margin-left: 5%;
-	margin-right: 10%;
-	margin-top:50px;
-	margin-bottom:0;
-	width: 90%;
-	font-size: 52px;
-	text-align: center;
-	vertical-align: 50%;
-	color: ##111918;
-	border: 0;
-}
-.partofbanner {
-	position: fixed;
-	margin-top:150px;
-	margin-left: 5%;
-	margin-right: 10%;
-	width: 90%;
-}
-*/
 
 
 /* Decks
  * ============*/
 .decks {
-	width: 80%;
-	height: 1000px;
+	height: 360px;
+	margin-top: 1%;
+	margin-bottom: 20px;
+	margin-left: 2%;
+	margin-right:2%;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.5);
+	background-opacity: 
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
+
+
+
