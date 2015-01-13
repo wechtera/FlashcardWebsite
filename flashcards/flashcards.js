@@ -27,6 +27,14 @@ if (Meteor.isClient) {
       Session.set("counter", Session.get("counter") + 1);
     }
   });
+
+  Template.AddCardForm.events({
+		'submit form':function(event) {
+			console.log("Card Submitted");
+			var cardFront = event.target.CardFront;
+			var cardBack = event.target.CardBack;
+		}
+  });
 }
 
 if (Meteor.isServer) {

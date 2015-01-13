@@ -11,7 +11,7 @@
 <template name="home">
 	<div class="contMain">
 		<div class="contMain-head">
-			<h1 class="contMain-title">I &#60;3 Flashing</h1>
+			<h1 class="contMain-title">Basic Flashcards</h1>
 
 			<div class="contButtons">
 				<div class="column-left">
@@ -67,18 +67,18 @@
 	<div class="deckCreation">
 		<div class="contMain">
 			<div class="contMain-head">
-				<h1 class="contMain-title">I &#60;3 Flashing</h1>
+				<h1 class="contMain-title">Basic Flashcards</h1>
 			</div>
 			<div class="contMain-cardCreate">
 
 				<div class="contMain-cardCreateHolder">
-					<form>
+					<form name="AddCardForm">
 						<ul class="CardAddList">
 							
-							<li class="LabelLeft"><label class="InputLabel">Card Front:</label></li><li> <textarea rows="5" cols="50" name="Card Front" class="CardAdd"></textarea></li>
-							<li class="LabelLeft"><label class="InputLabel">Card Back:</label></li><li> <textarea  rows="5" cols="50" name="Card Back" class="CardAdd"></textarea></li>
+							<li class="LabelLeft"><label class="InputLabel">Card Front:</label></li><li> <textarea rows="5" cols="50" name="CardFront" class="CardAdd"></textarea></li>
+							<li class="LabelLeft"><label class="InputLabel">Card Back:</label></li><li> <textarea  rows="5" cols="50" name="CardBack" class="CardAdd"></textarea></li>
 							
-							<li><input type="submit" name="Add Card"></li>
+							<li><input type="submit" name="Add Card" value="Add Card" class="green-sea-flat-button1"></li>
 						</ul>
 					</form>
 			</div>
