@@ -65,8 +65,32 @@
 
 <template name="CreateDeckCard">
 	<div class="deckCreation">
-		<h1> Creating a deck </h1>
+		<div class="contMain">
+			<div class="contMain-head">
+				<h1 class="contMain-title">I &#60;3 Flashing</h1>
+			</div>
+			<div class="contMain-cardCreate">
+
+				<div class="contMain-cardCreateHolder">
+					<form>
+						<ul class="CardAddList">
+							
+							<li class="LabelLeft"><label class="InputLabel">Card Front:</label></li><li> <textarea rows="5" cols="50" name="Card Front" class="CardAdd"></textarea></li>
+							<li class="LabelLeft"><label class="InputLabel">Card Back:</label></li><li> <textarea  rows="5" cols="50" name="Card Back" class="CardAdd"></textarea></li>
+							
+							<li><input type="submit" name="Add Card"></li>
+						</ul>
+					</form>
+			</div>
+			</div>
+			<div class="contMain-existing">
+			</div>
+			<a href="{{pathFor 'home'}}"> back to home</a>
+		</div>	
 	</div>
 
 
+</template>
+
+<template name="CardCreateForm">
 </template>

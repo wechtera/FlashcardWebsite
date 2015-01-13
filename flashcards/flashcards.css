@@ -129,6 +129,56 @@ body {
 	background-color: #F1EDCC;
 }
 
+/* Deck Creation
+ * =========================*/
+.contMain-existing {
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	height: 100px;
+	width: 90%;
+	overflow-y: scroll;
+	overflow-x: fixed;
+}
+
+.contMain-cardCreate {
+	background-color: #FFFFFF;
+	border-radius:5px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 320px;
+	width: 90%;
+}
+.CardAdd {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	padding: .2em .2em;
+	height: 100px;
+	width: 70%;
+	text-align: center;
+	vertical-align: center;
+	font-size: 20px;
+}
+.CardAddList {
+	list-style: none;
+	text-align: center;
+}
+.InputLabel {
+	/* Do text format here */
+	font-size: 20px;
+}
+.LabelLeft {
+	margin-left: 15%;
+	text-align: left;
+}
+
 
 /* Decks
  * ============*/
