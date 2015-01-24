@@ -1,4 +1,6 @@
 flashDeck = new Mongo.Collection('FlashDecks');
+
+var tempAddDeck = [];
 //
 //Mongo Setup:
 //Decks Collection {
@@ -40,10 +42,10 @@ if (Meteor.isClient) {
 				console.log("Card Submitted");
 				var cardFront = event.target.CardFront.value;
 				var cardBack = event.target.CardBack.value;
-				currentAddFronts[currentAddFronts.length] =  cardFront;
-				currentAddBacks[currentAddBacks.length] = cardBack;
-				console.log(currentAddFronts[1]);
-				console.log(currentAddBacks[1]);
+
+				tempAddDeck[tempAddDeck.length] = {front : cardFront},{back : cardBack}
+				//debug 
+				//reset two name spaces
 				event.target.CardFront.value="";
 				event.target.CardBack.value="";
 				
@@ -51,12 +53,11 @@ if (Meteor.isClient) {
 
 			}
 	});
-	Template.CreatDeckCard.helpers ({
-		'front': function() {
-			return currentAddFronts.find();
-		},
-		'back': function() {
-			return currentAddBacks.find();
+	Template.CreateDeckCard.helpers ({
+		tempAdd: function() {
+			for(x in tempAddDeck)
+				console.log(tempAddDeck[x].front);
+			return tempAddDeck;
 		}
 	});
 }

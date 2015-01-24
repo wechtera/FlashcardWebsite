@@ -85,14 +85,18 @@
 			</div>
 			<div class="contMain-existing">
 				<div class="cardFronts" name="existCardBack"> 
-					{{#each currentAddFronts}}
-						<li>{{this}}</li>
-					{{/each}}
+					<ul>
+						{{#each tempAdd}}
+						<li>{{{this.front}}}</li>
+						{{/each}}
+					</ul>
 				</div>
 				<div  class="cardBacks" name="existCardFront">
-					{{#each currentAddBacks}}
-						<li>{{this}}</li>
-					{{/each}}
+					<ul>
+						{{#each tempAdd}}
+						<li>{{this.back}}</li>
+						{{/each}}
+					</ul>
 				</div>
 			</div>
 			<a href="{{pathFor 'home'}}"> back to home</a>
