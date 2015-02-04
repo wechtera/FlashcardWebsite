@@ -65,6 +65,17 @@
 
 <template name="CreateDeckCard">
 	<div class="deckCreation">
+		<div class="deckMetaBox">
+			<div class="metaForm">
+				<form class="MetaEnterForm">
+					<ul class="metaList">
+						<li class="metaLabel"><label class="metaLabelInput">Deck Name:</label></li><li><input type="text" class="metaFormInput"></li>
+						<li class="metaLabel"><label class="metaLabelInput">Deck Description:</label></li><li><input type="text" class="metaFormInput"></li>
+						<li><input type="submit" name="Create Deck" value= "Create Deck" class="metaDeckCreationButton"> </li>
+					</ul>
+				</form>
+			</div>
+		</div>
 		<div class="contMain">
 			<div class="contMain-head">
 				<h1 class="contMain-title">Basic Flashcards</h1>
@@ -72,7 +83,7 @@
 			<div class="contMain-cardCreate">
 
 				<div class="contMain-cardCreateHolder">
-					<form name="AddCardForm">
+					<form class="AddCardForm">
 						<ul class="CardAddList">
 							
 							<li class="LabelLeft"><label class="InputLabel">Card Front:</label></li><li> <textarea rows="5" cols="50" name="CardFront" class="CardAdd"></textarea></li>
@@ -84,17 +95,17 @@
 			</div>
 			</div>
 			<div class="contMain-existing">
-				<div class="cardFronts" name="existCardBack"> 
+				<div class="cardFronts" name="existCardFronts"> 
 					<ul>
-						{{#each tempAdd}}
-						<li>{{{this.front}}}</li>
+						{{#each tempAddFront}}
+						<li>{{this}}</li>
 						{{/each}}
 					</ul>
 				</div>
-				<div  class="cardBacks" name="existCardFront">
+				<div  class="cardBacks" name="existCardBacks">
 					<ul>
-						{{#each tempAdd}}
-						<li>{{this.back}}</li>
+						{{#each tempAddBack}}
+						<li>{{this}}</li>
 						{{/each}}
 					</ul>
 				</div>
@@ -103,6 +114,7 @@
 		</div>	
 	</div>
 
+	{{onLoadCheck}}
 
 </template>
 

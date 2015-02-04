@@ -228,8 +228,6 @@ body {
 	float: right;
 	background-color: #F14121;
 }
-.cardBacks {
-}
 .InputLabel {
 	/* Do text format here */
 	margin-top: 1em;
@@ -240,6 +238,76 @@ body {
 	margin-left: 25%;
 	text-align: left;
 }
+/*  Card title overlay
+ *  ==================*/
+.deckMetaBox {
+	z-index: 1000;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height:100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.metaForm {
+	position: fixed;
+	top: 33%;
+	left: 40%;
+	width: 250px;
+	height: 250px;
+	background-color: #B8B8B8;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 1px;
+}
+.metaLabel {
+	font-size: 18px;
+	font-family: "Lucida Sans Unicode","Lucida Grande", sans-serif;
+	padding-left: 10px;
+	padding-top: 20px;
+	padding-bottom: 7px;
+	text-align: left;
+}
+.metaFormInput {
+	width: 80%;
+	height: 25px;
+	text-font: 20px;
+	text-align: center;
+}
+.metaList {
+	list-style: none;
+	padding: 0;
+}
+
+.metaEnterForm {
+	left: 0;
+}
+.metaDeckCreationButton {
+
+	width: 100px;
+	height: 30px;
+	margin-top: 20px;
+	color: white;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	background: #34495e;
+	border: 0;
+	border-bottom: 2px solid #263849;
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 -2px #263849;
+	box-shadow: inset 0 -2px #263849;
+}
+.metaDeckCreationButton:active {
+	top: 1px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+
 
 
 /* Decks
