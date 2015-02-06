@@ -1,7 +1,5 @@
 flashDeck = new Mongo.Collection('FlashDecks');
 
-var deckName;
-var deckDescription;
 var listDepends = new Deps.Dependency;
 //
 //Mongo Setup:
@@ -36,9 +34,9 @@ Router.map(function() {
 
 
 if (Meteor.isClient) {
-	
 
 	Template.CreateDeckCard.events({
+
 			'submit .AddCardForm':function(event) {
 				event.preventDefault();
 				console.log("Card Submitted");
@@ -83,6 +81,12 @@ if (Meteor.isClient) {
 				divToHide.style.display = "none";
 				divToHide.innerHTML='';
 				sessionStorage.setItem("metaIn", true);
+				//Storing metadata of it
+				var deckName = event.target.DeckName.value;
+				var deckDescript = event.target.DeckDescription.value;
+				sessionStorage.setItem("deckName", deckName);
+				sessionStorage.setItem("deckDescript", deckDescript);
+
 				return false;
 			}
 	});
@@ -112,8 +116,12 @@ if (Meteor.isClient) {
 			console.log(tempAddDeckBack);
 
 			return tempAddDeckBack;
+		},
+		isEmpty: function(v1) {
+			return v1 =="" || v1 ==" ";
 		}
 	});
+
 	Template.CreateDeckCard.rendered = function() {
 			console.log("OnLoadCheck Hit");
 			if(sessionStorage.getItem("metaIn")) {
@@ -123,6 +131,12 @@ if (Meteor.isClient) {
 				divToHide.innerHTML='';
 
 			}
+		$('#existCardFronts').on('scroll', function() {
+			$('#existCardBacks').scrollTop($(this).scrollTop());
+		});
+		$('#existCardBacks').on('scroll', function() {
+			$('#existCardFronts').scrollTop($(this).scrollTop());
+		});
 			
 	}
 }
