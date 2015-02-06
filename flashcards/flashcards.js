@@ -88,7 +88,25 @@ if (Meteor.isClient) {
 				sessionStorage.setItem("deckDescript", deckDescript);
 
 				return false;
+			},
+			'click .CreateDeckButton':function(event) {
+				//get deck title descript fronts and backs
+				var deckName = sessionStorage.getItem("deckName");
+				var deckDescript = sessionStorage.getItem("deckDescript");
+				var deckFronts = JSON.parse(sessionStorage.getItem("tempDeckFront"));
+				var deckBacks = JSON.parse(sessionStorage.getItem("tempDeckBack"));
+				flashDeck.insert({
+					name: deckName,
+					description: deckDescript,
+					dateCreated: new Date(),
+					fronts: deckFronts,
+					backs: deckBacks
+				});
+				sessionStorage.clear();
+				Router.go('/');
+
 			}
+
 	});
 	Template.CreateDeckCard.helpers ({
 		tempAddFront: function() {
