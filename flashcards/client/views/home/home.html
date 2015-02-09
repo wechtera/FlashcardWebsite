@@ -1,0 +1,36 @@
+<head>
+  <title>flashcards</title>
+</head>
+
+<body>
+
+
+</body>
+
+
+<template name="home">
+	<div class="contMain">
+		<div class="contMain-head">
+			<h1 class="contMain-title">Basic Flashcards</h1>
+
+			<div class="contButtons">
+				<div class="column-left">
+					<form action={{pathFor 'CreateDeckCard'}}>
+						<input type="submit" value="Create New Deck" class="green-sea-flat-button">
+					</form>
+				</div>
+				<div class="column-right">
+					<form action="./Information">
+						<input type="submit" value="Site Information" class="wet-asphalt-flat-button">
+					</form>
+				</div>
+				<div class="column-center">
+					<form action="./StudyDeck">
+						<input type="submit" value="Study Deck" class="peter-river-flat-button">
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</template>
