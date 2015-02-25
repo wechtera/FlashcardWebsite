@@ -4,6 +4,10 @@ if(Meteor.isClient) {
 		getDecks: function() {
 			return flashDeck.find().fetch();
 		}
+
 	
 	});
+	Template.studydeck.rendered = function() {
+		$('select').Minimalistbox();
+	}
 }

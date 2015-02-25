@@ -7,8 +7,6 @@ if (Meteor.isClient) {
 			'submit .AddCardForm':function(event) {
 				event.preventDefault();
 				console.log("Card Submitted");
-				var tempAddDeckFront = []; 
-				var tempAddDeckBack = [];
 				var cardFront = event.target.CardFront.value;
 				var cardBack = event.target.CardBack.value;
 				//fetching stuff
@@ -22,6 +20,8 @@ if (Meteor.isClient) {
 				}
 				//adding fronts and back
 				if(tempAddDeckFront === null){
+					var tempAddDeckFront = []; 
+					var tempAddDeckBack = [];
 					tempAddDeckFront[0] = cardFront;
 					tempAddDeckBack[0] = cardBack;
 				}
@@ -50,7 +50,7 @@ if (Meteor.isClient) {
 				sessionStorage.setItem("metaIn", true);
 				//Storing metadata of it
 				var deckName = event.target.DeckName.value;
-				var deckDescript = event.target.DeckDescription.value;
+				var deckDescript = event.target.DeckDescript.value;
 				sessionStorage.setItem("deckName", deckName);
 				sessionStorage.setItem("deckDescript", deckDescript);
 

@@ -78,8 +78,6 @@
 	height: 400px;
 	width: 100%;
 	background-color: #63b0a4;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
 	overflow-x: fixxed;
 	overflow-y: scroll;
 }
@@ -94,4 +92,42 @@
 }
 .deckListOption:focus {
 	color: #ffffff;
+}
+
+.MineOrAllSelect {
+	float:right;
+	margin-right: 50px;
+	width: 100px;
+	height: 30px;
+	background-color: #14cc77;
+	border-top-right-radius: 5px;
+	border:0;
+	border-bottom: 3px solid #108357;
+	text-align: center;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+	color: #07642a;
+	font-size: 18px;
+
+}
+.optionCSS {
+	color: black;
+}
+
+.searchbarForm {
+	margin-left: 51px;
+	float: left;
+}
+.searchBar {
+	background-color: rgba(0,0,0,0.2);
+	border-top-left-radius: 7px;
+	height: 13px;
+	width: 300px;
+	border-style: none;
+	color: white;
+	font-size: 20px;
+	padding:10px;
+	
+}
+.searchBar:focus {
+	outline:none;
 }

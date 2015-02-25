@@ -3,10 +3,19 @@
 		<div class="contMain-head">
 			<h1 class="contMain-title">Basic Flashcards</h1>
 		</div>
+		<div>
+			<form class="searchbarForm">
+				<input type="text" class="searchBar" placeholder="Search...">
+			</form>
+			<select class="MineOrAllSelect">  
+				<option value="mine" class="optionCSS">Mine Only</option>
+				<option value="all" class="optionCSS">Show All</option>
+			</select>
+		</div>
 		<div class="deckListing">
 			<select name="deck" size="10" class="deckListSelect">
 				{{#each getDecks}}
-				<option value="{{_id}}" class="deckListOption">{{name}} {{description}}</option>
+					<option value="{{_id}}" class="deckListOption">{{name}} {{description}}</option>
 				{{/each}}
 			</select>
 		</div>
@@ -22,10 +31,11 @@
 				</form>
 			</div>
 			<div class="column-center">
-				<form action="./somethingthird">
+				<form action="{{pathFor 'studydeckSpecific'}}">
 					<input type="submit" class="StudyDeckButton" value="Study Deck"/>
 				</form>
 			</div>
 		</div>
+		<a href="{{pathFor 'home'}}"> back to home</a>
 	</div>
 </template>

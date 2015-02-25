@@ -1,4 +1,4 @@
-flashDeck = new Mongo.Collection('FlashDecks');
+flashDeck = new Mongo.Collection('flashDeck');
 
 
 //
@@ -29,5 +29,11 @@ Router.map(function() {
 	this.route('CreateDeckCard');
 	this.route('home', {
 		path: '/'
+	});
+	this.route('studydeck');
+	this.route('studyDeckSpecific', {
+			template: 'studydeckSpecific',
+			path: 'studydeck/:_id',
+			data: function() {return flashDeck.findOne({_id: this.params.id})}
 	});
 });
