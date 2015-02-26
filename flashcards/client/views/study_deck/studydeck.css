@@ -73,7 +73,7 @@
 	box-shadow: inset 0 -2px #3b3244;
 }
 
-.deckListSelect {
+.List {
 
 	height: 400px;
 	width: 100%;
@@ -81,14 +81,23 @@
 	overflow-x: fixxed;
 	overflow-y: scroll;
 }
-.deckListOption {
-	height: 25px;
+.deckListDivs {
+	height: 40px;
 	width: 100%;
 	border: solid;
-	border-width: .5px;
-	font-size: 20px;
-	background-color: #63B0a4;
+	border-width: 1px;
+	font-size: 35px;
+	background-color: #FFFFFF;
 	
+}
+.listDivFocused {
+	height: 40px;
+	width: 100%;
+	border: solid;
+	border-width: 1px;
+	border-color: red;
+	font-size: 35px;
+	background-color: #14dd88;
 }
 .deckListOption:focus {
 	color: #ffffff;

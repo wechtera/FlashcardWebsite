@@ -13,11 +13,11 @@
 			</select>
 		</div>
 		<div class="deckListing">
-			<select name="deck" size="10" class="deckListSelect">
+			<div class="List">
 				{{#each getDecks}}
-					<option value="{{_id}}" class="deckListOption">{{name}} {{description}}</option>
+				<div id="{{_id}}" class="deckListDivs">{{name}} {{description}}</div>
 				{{/each}}
-			</select>
+			</div>
 		</div>
 		<div class="buttonsDiv">
 			<div class="column-left">
