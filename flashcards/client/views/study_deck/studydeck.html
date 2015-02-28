@@ -1,5 +1,5 @@
 <template name="studydeck">
- 	<div class="contMain">
+ 	<div class="contMain"> 
 		<div class="contMain-head">
 			<h1 class="contMain-title">Basic Flashcards</h1>
 		</div>
@@ -31,7 +31,7 @@
 				</form>
 			</div>
 			<div class="column-center">
-				<form action="{{pathFor 'studydeckSpecific'}}">
+				<form action="{{prepDeck}}{{pathFor 'study'}}">
 					<input type="submit" class="StudyDeckButton" value="Study Deck"/>
 				</form>
 			</div>

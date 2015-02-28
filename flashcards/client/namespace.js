@@ -31,9 +31,5 @@ Router.map(function() {
 		path: '/'
 	});
 	this.route('studydeck');
-	this.route('studyDeckSpecific', {
-			template: 'studydeckSpecific',
-			path: 'studydeck/:_id',
-			data: function() {return flashDeck.findOne({_id: this.params.id})}
-	});
+	this.route('study');
 });

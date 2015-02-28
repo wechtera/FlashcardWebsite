@@ -1,0 +1,20 @@
+.cardDiv {
+
+	background-color: rgba(142,142,142,0.5);
+	margin-left: auto;
+	margin-right: auto;
+	height: 550px;
+	width: 90%;
+	border-radius: 10px;
+	x-overflow: fixxed;
+	y-overflow: fixxed;
+}
+.cardDisplay {
+	height: 100px;
+	width: 200px;
+	background-color: rgba(144,144,144,0.9);
+	margin: auto auto;
+	border-radius: 10px;
+
+}
+
