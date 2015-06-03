@@ -60,8 +60,8 @@ if (Meteor.isClient) {
 				//get deck title descript fronts and backs
 				var deckName = sessionStorage.getItem("deckName");
 				var deckDescript = sessionStorage.getItem("deckDescript");
-				var deckFronts = JSON.parse(sessionStorage.getItem("tempDeckFront"));
-				var deckBacks = JSON.parse(sessionStorage.getItem("tempDeckBack"));
+				var deckFronts = JSON.stringify(sessionStorage.getItem("tempDeckFront"));
+				var deckBacks = JSON.stringify(sessionStorage.getItem("tempDeckBack"));
 				flashDeck.insert({
 					name: deckName,
 					description: deckDescript,
